@@ -1,10 +1,10 @@
-# ws-verilog
+# workshop-verilog
 
 code compiled with [Icarus Verilog](http://iverilog.icarus.com/)
 
  <img src="https://github.com/bgarrido7/ws-verilog/blob/master/screnshot.png" width="800">
 
-# Installation
+## Installation
 
 - on Linux (terminal):
 
