@@ -1,28 +1,3 @@
-/******************************************************************************************
- **************************** LABORATORY PROJECT 1 - psdsqrt.v ****************************
- ******************************************************************************************
- * This project consists in implementing a sequential calculator of the square root for
- * 32-bit unsigned integer numbers. The circuit is builted as a synthesizable Verilog
- * module and represents the logic diagram shown in the lab guidelines.
- * The module descrived in this file is based on the following algorithm (processed in 
- * bit domain):
- *   Initial values:
- *     - xin is the argument of square root
- *     - testbit = (1<<15) -> initializes the test bit applied in each iteration
- *     - tempsqrt = 0; -> we start the algorithm from the MSB to the LSB
- *
- *   1. testsqrt = testbit | tempsqrt
- *   2. Comparation between xin and testsqrt*testsqrt
- *       - If xin >= testsqrt*testsqrt, the value in testsqrt in the present iteration is
- *           valid until the present bit (MSB, MSB-1, ..., LSB) and tempsqrt = testsqrt;
- *       - Else, the tempsqrt holds is value.
- *   3. testbit = testbit >> 1 -> the algorithm advances is executing for the next bit.
- ******************************************************************************************
- * Authors:
- *   - Beatriz Neves Garrido (up201504710@fe.up.pt | bianevesgarrido@gmail.com)
- *   - Ricardo Barbosa Sousa (up201503004@fe.up.pt | sousa.ricardobarb@gmail.com)
- ******************************************************************************************/
-
 // Module declaration
 module psdsqrt(
 		input clock,               // Master clock implemented in the module
@@ -32,9 +7,6 @@ module psdsqrt(
 		input [31:0] xin,          // Operand (unsigned)
 		output reg [15:0] sqrt     // Square root of the operand xin
     );
-
-`define GROUPID   72'h201504710_201503004
-initial $display("Beatriz Neves Garrido; Ricardo Barbosa Sousa");
 
 // Regs and wires declaration
 reg  [31:0] xin_stored;       // Register that stores the input value to square root's argument

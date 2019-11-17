@@ -1,19 +1,3 @@
-/***********************************************************************************
- * PSDi 2018/19
- *
- * Lab 1 - Design and verification of a sequential square root calculator
- *
- *   This Verilog code is property of University of Porto
- *   Its utilization beyond the scope of the course Digital Systems Design
- *   (Projeto de Sistemas Digitais) of the Integrated Master in Electrical 
- *   and Computer Engineering requires explicit authorization from the author.
- *
- *   jca@fe.up.pt, Oct 2018
- ***********************************************************************************
- * Authors of the module psdsqrt:
- *   - Beatriz Neves Garrido (up201504710@fe.up.pt | bianevesgarrido@gmail.com)
- *   - Ricardo Barbosa Sousa (up201503004@fe.up.pt | sousa.ricardobarb@gmail.com)
- ***********************************************************************************/
 `include "psdsqrt.v"
 
 module psdsqrt_tb;
